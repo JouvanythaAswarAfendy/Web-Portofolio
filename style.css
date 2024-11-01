@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    font-size: 1rem; /* 1rem = 16px */
+    line-height: 1.9rem;
+}
+
+a {
+    text-decoration: none;
+    color: black; /* Change link color for visibility */
+}
+
+.main-container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/* Button styling */
+.btn {
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1.5px solid black;
+    cursor: pointer;
+}
+
+/* Title styling */
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: grey;
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+/* Navigation styling */
+.nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    padding: 2rem; /* Space around the nav */
+    transition: 0.2s ease-in-out;
+    position: relative;
+    z-index: 10;
+}
+
+nav {
+    display: flex; /* Make the nav a flex container */
+}
+
+.nav ul {
+    list-style: none;
+    display: flex; /* Align items in a row */
+    gap: 3rem;
+
+}
+
+/* Section styles */
+#home {
+    display: grid; /* Align home section contents in a row */
+    grid-template-columns: 1fr 1fr;
+    height: 720px;
+    align-items: center;
+}
+
+.home-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+    color: black;
+}
+
+.home-right {
+    display: flex;
+    justify-content: center;
+}
+
+.home-right img {
+    width: 500px; 
+    border-radius: 0.7rem;
+    position: relative;
+    top: -100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: black;
+}
+
+nav ul li a {
+    color: black;
+}
+
+section {
+    padding-left: 3rem;
+    padding-bottom: 5rem;
+}
+
+/* About Section */
+#about {
+    background-color: rgb(195, 222, 233);
+    padding: 6rem 0;
+}
+
+.section-title-about {
+    text-align: center;
+    margin: 1rem 0 4rem;
+}
+
+/* Layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.about {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: black;
+    border-radius: 0.7rem;
+}
+
+.about h4 {
+    color: white;
+    margin: 0.5rem 0;
+}
+
+.about p {
+    color: white;
+}
+
+.about-icon {
+    background-color: rgb(195, 222, 233);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+/* END OF ABOUT */
+
+/* SKILLS & EXPERIENCE */
+#skills {
+    padding: 6rem 0;
+    background: white;
+}
+
+.section-titles-skills {
+    text-align: center;
+    margin: 1rem 0 4rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.experience {
+    display: flex;
+    gap: 2rem;
+}
+
+.experience line {
+    padding: 0 0.7rem;
+}
+
+.experience .line div {
+    width: 2px;
+    height: 100%;
+    background: black;
+    position: relative;
+}
+
+.experience-info {
+    margin: 0.3rem 0;
+}
+
+.experience-date {
+    margin-bottom: 3rem;
+}
+
+.experience .line div::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.skills-right {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+
+/* End of Experience & Skills */
+
+/* Contact Section */
+#contact {
+    padding: 6rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: black;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid gray;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: rgb(195, 222, 233);
+    color: black;
+}
+/* End od Contact */
+
+/* Footer */
+footer {
+    margin-bottom: 0;
+    padding: 4rem 0;
+    background: rgb(195, 222, 233);
+    text-align: center;
+}
+
+.footer-icons {
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    margin: 0 0.5rem;
+}
+
+.footer-icons a:hover {
+    fill: black;
+}
+
+.footer-icons {
+    fill: grey;
+}
+
+html {
+    scroll-behavior: smooth;
+}
